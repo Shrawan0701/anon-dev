@@ -1,0 +1,304 @@
+/* =========================
+   Global Styles
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  background-color: #1a1a2e; /* dark background */
+  color: #e0e0e0; /* default text color */
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana;
+}
+
+
+/* Links */
+a {
+  color: #bb86fc;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff77ff;
+  text-decoration: underline;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  background: linear-gradient(90deg, #2c003e, #5a00b0);
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar .btn-outline-light {
+  border-color: #bb86fc;
+  color: #bb86fc;
+  transition: all 0.3s ease;
+}
+
+.navbar .btn-outline-light:hover {
+  background-color: #bb86fc;
+  color: #1a1a2e;
+  transform: scale(1.05);
+}
+
+.navbar .btn-success {
+  background: #8c00ff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.navbar .btn-success:hover {
+  background: #bb00ff;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* =========================
+   Cards
+========================= */
+.card {
+  background: #2b1a3d; /* dark purple card */
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(187, 0, 255, 0.5);
+}
+
+.card .card-text {
+  color: #f0f0f0;
+}
+
+.card .card-subtitle {
+  color: #cfcfcf !important;
+}
+
+.card small {
+  color: #aaa;
+}
+
+/* Highlighted Top Comment */
+.card.border-success {
+  border-color: #00ffbb !important;
+  background-color: #3a1a55;
+}
+
+/* =========================
+   Buttons
+========================= */
+button {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-danger {
+  border-radius: 6px;
+}
+
+.btn-outline-primary:hover {
+  background-color: #8c00ff;
+  color: #fff;
+  border-color: #8c00ff;
+}
+
+.btn-outline-success:hover {
+  background-color: #00ffbb;
+  color: #1a1a2e;
+}
+
+.btn-outline-danger:hover {
+  background-color: #ff0080;
+  color: #fff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #bb86fc;
+  color: #1a1a2e;
+}
+
+/* Popular / Recent buttons */
+button.btn-sm.btn-primary {
+  background-color: #8c00ff;
+  border-color: #8c00ff;
+  color: #fff;
+}
+
+button.btn-sm.btn-outline-primary {
+  border-color: #bb86fc;
+  color: #bb86fc;
+}
+
+button.btn-sm.btn-outline-primary:hover {
+  background-color: #bb86fc;
+  color: #1a1a2e;
+}
+
+/* =========================
+   Forms, Inputs, Textarea
+========================= */
+input.form-control,
+textarea.form-control {
+  color: #e0e0e0 !important;
+  background-color: #3a1a55 !important;
+  border: 1px solid #5a00b0 !important;
+  border-radius: 8px;
+}
+
+/* Input & textarea placeholders */
+input.form-control::placeholder,
+textarea.form-control::placeholder {
+  color: #aaa !important;
+  opacity: 1 !important;
+}
+
+/* Older browser support */
+input.form-control::-webkit-input-placeholder,
+textarea.form-control::-webkit-input-placeholder {
+  color: #aaa !important;
+}
+input.form-control:-ms-input-placeholder,
+textarea.form-control:-ms-input-placeholder {
+  color: #aaa !important;
+}
+input.form-control::-ms-input-placeholder,
+textarea.form-control::-ms-input-placeholder {
+  color: #aaa !important;
+}
+
+/* =========================
+   Select / Dropdown
+========================= */
+select.form-select {
+  color: #e0e0e0 !important;
+  background-color: #3a1a55 !important;
+  border: 1px solid #5a00b0 !important;
+  border-radius: 8px;
+}
+
+/* All options inside select */
+select.form-select option {
+  color: #e0e0e0 !important;
+  background-color: #3a1a55 !important;
+}
+
+/* First option acts like placeholder */
+select.form-select option:first-child {
+  color: #aaa !important;
+}
+
+/* =========================
+   Alerts
+========================= */
+.alert-success {
+  background-color: #00ffbb;
+  color: #1a1a2e;
+  border: none;
+}
+
+/* =========================
+   Comment Sorting Dropdown
+========================= */
+select.form-select.w-auto {
+  background-color: #3a1a55;
+  color: #e0e0e0;
+  border: 1px solid #5a00b0;
+}
+
+select.form-select.w-auto:focus {
+  border-color: #bb86fc;
+  box-shadow: 0 0 10px rgba(187, 0, 255, 0.5);
+  outline: none;
+}
+
+/* =========================
+   Misc
+========================= */
+.text-muted {
+  color: #aaa !important;
+}
+
+form.mb-3 input.form-control,
+form.mb-3 button.btn {
+  margin-top: 0.5rem;
+}
+
+.card h5 {
+  color: #fff;
+}
+
+/* =========================
+   PostForm Placeholders Fix
+========================= */
+/* Inputs & textarea inside PostForm */
+div.card input.form-control::placeholder,
+div.card textarea.form-control::placeholder {
+  color: #ccc !important;   /* light gray */
+  opacity: 1 !important;
+}
+
+/* Select inside PostForm */
+div.card select.form-select option:first-child {
+  color: #aaa !important;   /* placeholder effect */
+}
+
+div.card select.form-select option {
+  color: #e0e0e0 !important;  /* other options light */
+  background-color: #3a1a55 !important;
+}
+
+/* =========================
+   PostForm Placeholders Fix - Stronger Specificity
+========================= */
+.card.shadow-sm.p-3 input.form-control::placeholder,
+.card.shadow-sm.p-3 textarea.form-control::placeholder {
+    color: #ccc !important;   /* light gray placeholder */
+    opacity: 1 !important;
+}
+
+.card.shadow-sm.p-3 select.form-select option:first-child {
+    color: #aaa !important;   /* first option as placeholder */
+}
+
+.card.shadow-sm.p-3 select.form-select option {
+    color: #e0e0e0 !important;  /* other options light */
+    background-color: #3a1a55 !important;
+}
+/* PostForm select placeholder fix */
+div.card select.form-select:invalid {
+  color: #aaa !important;        /* placeholder text color */
+}
+
+div.card select.form-select option {
+  color: #e0e0e0 !important;     /* regular options color */
+  background-color: #3a1a55 !important;
+}
+/* Inputs & textarea inside PostForm */
+div.card input.form-control::placeholder,
+div.card textarea.form-control::placeholder {
+  color: #ccc !important; /* light gray */
+}
+
+/* Select placeholder (first option) */
+div.card select.form-select:invalid {
+  color: #aaa !important;
+}
+
+/* All other select options */
+div.card select.form-select option {
+  color: #e0e0e0 !important;
+  background-color: #3a1a55 !important;
+}
+/* PostForm labels */
+.card.shadow-sm.p-3 .form-label {
+  color: #e0e0e0 !important; /* force labels inside PostForm to light gray */
+}
+
