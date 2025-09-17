@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter } from "react-router-dom"; // <- you imported it
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 
 
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   //<React.StrictMode>
     <BrowserRouter>
-      <App />   {/* <- App must be wrapped inside BrowserRouter */}
+      <App />
     </BrowserRouter>
   //</React.StrictMode>
 );

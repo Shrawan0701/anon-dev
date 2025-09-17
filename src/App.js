@@ -9,18 +9,18 @@ function App() {
   const [view, setView] = useState("feed");
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [selectedPost, setSelectedPost] = useState(null);
-  const [feedSort, setFeedSort] = useState("popular"); // default sort
-  const [tempSortForUser, setTempSortForUser] = useState(null); // after post
+  const [feedSort, setFeedSort] = useState("popular");
+  const [tempSortForUser, setTempSortForUser] = useState(null);
 
   const handleSelectPost = (post) => {
     setSelectedPost(post);
     setView("postDetail");
   };
 
-  // wrapper for navbar navigation
+
   const handleSetView = (v) => {
     if (v === "feed") {
-      setSelectedCompany(null); // reset company filter ONLY when going to feed
+      setSelectedCompany(null);
     }
     setView(v);
   };
@@ -35,7 +35,7 @@ function App() {
             sort={tempSortForUser || feedSort}
             setSort={(s) => {
               setFeedSort(s);
-              setTempSortForUser(null); // reset temp sort if user clicks buttons
+              setTempSortForUser(null);
             }}
             company={selectedCompany}
           />

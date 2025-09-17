@@ -5,13 +5,13 @@ import {
   upvotePost,
   downvotePost,
   reportPost,
-  fetchComments, // ✅ still using this
+  fetchComments,
 } from "../services/api";
 
 function Feed({ company, onSelectPost, sort, setSort }) {
   const [posts, setPosts] = useState([]);
   const [commentCounts, setCommentCounts] = useState({});
-  const [expandedPosts, setExpandedPosts] = useState({}); // ✅ state for read more
+  const [expandedPosts, setExpandedPosts] = useState({});
 
   useEffect(() => {
     const load = async () => {
@@ -23,7 +23,6 @@ function Feed({ company, onSelectPost, sort, setSort }) {
       }
       setPosts(res.data);
 
-      // ✅ fetch comment counts for each post
       const counts = {};
       for (const post of res.data) {
         try {
@@ -57,7 +56,7 @@ function Feed({ company, onSelectPost, sort, setSort }) {
     alert("Thanks for reporting. Our team will review it.");
   };
 
-  // ✅ toggle for read more
+
   const toggleExpand = (id) => {
     setExpandedPosts((prev) => ({ ...prev, [id]: !prev[id] }));
   };

@@ -9,7 +9,7 @@ import {
 function PostDetail({ post, onBack }) {
   const [comments, setComments] = useState([]);
   const [content, setContent] = useState("");
-  const [sort, setSort] = useState("newest"); // default newest
+  const [sort, setSort] = useState("newest");
 
   useEffect(() => {
     loadComments();
@@ -28,14 +28,14 @@ function PostDetail({ post, onBack }) {
     setContent("");
   };
 
-  // Sorting logic
+
   const sortedComments = [...comments].sort((a, b) => {
     if (sort === "newest") return new Date(b.timestamp) - new Date(a.timestamp);
     if (sort === "oldest") return new Date(a.timestamp) - new Date(b.timestamp);
     return 0;
   });
 
-  // Find top comment (highest net score = upvotes - downvotes)
+
   const topComment =
     comments.length > 0
       ? comments.reduce(
@@ -75,7 +75,7 @@ function PostDetail({ post, onBack }) {
         </select>
       </h6>
 
-      {/* Add comment form */}
+
       <form onSubmit={handleAddComment} className="mb-3">
         <input
           type="text"
@@ -89,7 +89,7 @@ function PostDetail({ post, onBack }) {
         </button>
       </form>
 
-      {/* Highlight Top Comment */}
+
       {topComment && (
         <div className="card border-success mb-2">
           <div className="card-body py-2">
@@ -106,7 +106,7 @@ function PostDetail({ post, onBack }) {
         </div>
       )}
 
-      {/* All comments */}
+
       {sortedComments.map((c) => (
         <div className="card mb-2" key={c.id}>
           <div className="card-body py-2">

@@ -5,13 +5,13 @@ function PostForm({ setView, setTempSortForUser }) {
   const [company, setCompany] = useState("");
   const [category, setCategory] = useState("");
   const [content, setContent] = useState("");
-  const [message, setMessage] = useState(""); // Success message
-  const [toast, setToast] = useState(""); // For abusive words warning
+  const [message, setMessage] = useState("");
+  const [toast, setToast] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic abusive words check
+
    const abusiveWords = [
      "bitch", "jerk", "bastard", "dick",
      "ass", "cunt", "slut", "douche",
@@ -20,9 +20,9 @@ function PostForm({ setView, setTempSortForUser }) {
      "madarchod", "benchod", "mc", "bc", "gandu"
    ];
 
-   // Only check 'content' for abusive words
+
    const foundAbuse = abusiveWords.some((word) => {
-     const regex = new RegExp(`\\b${word}\\b`, "i"); // whole word match, case-insensitive
+     const regex = new RegExp(`\\b${word}\\b`, "i");
      return regex.test(content);
    });
 
@@ -46,7 +46,7 @@ function PostForm({ setView, setTempSortForUser }) {
         Please do not use abusive language or include personal names of Managers/HR. Posts violating this will be removed.
       </p>
 
-      {/* Toast notification for abusive words */}
+
       {toast && (
         <div
           className="toast align-items-center text-bg-danger border-0 show mb-3"
@@ -65,7 +65,7 @@ function PostForm({ setView, setTempSortForUser }) {
         </div>
       )}
 
-      {/* Success message */}
+
       {message && <div className="alert alert-success">{message}</div>}
 
       <form onSubmit={handleSubmit}>
